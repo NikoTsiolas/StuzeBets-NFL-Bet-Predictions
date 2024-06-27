@@ -7,6 +7,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import joblib
 from sklearn.model_selection import train_test_split
+from sklearn. ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, classification_report, roc_auc_score
+
 
 # Load datasets
 stadiums = pd.read_csv('nfl_stadiums.csv', encoding='latin1')
@@ -50,3 +53,17 @@ print(f'y_test shape: {y_test.shape}')
 
 print ('First few entries of y_train:') 
 print(y_train.head())
+
+model = RandomForestClassifier(n_estimators=100 , random_state=42)
+
+model.fit(X_train, y_train)
+
+y_pred = model.predict(X_test)
+
+accuracy = accuracy_score(y_test, y_pred)
+classification_rep = classification_report(y_test,y_pred)
+roc_auc = roc_auc_score(y_test, model.predict_proba(X_test)[:,1])
+
+print(f'Accuracy: {accuracy}')
+print(f'Classification Report:\n{classification_rep}')
+print(f'AUC-ROC: {roc_auc}')

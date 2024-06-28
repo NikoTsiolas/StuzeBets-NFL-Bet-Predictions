@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StuzeBets NFL Betting Predictions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>StuzeBets NFL Betting Predictions</h1>
+        <form id="predictForm">
+            <!-- Add input fields for your model features here -->
+            <div class="form-group">
+                <label for="team_points_avg_home">Home Team Avg Points:</label>
+                <input type="text" id="team_points_avg_home" name="team_points_avg_home" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="team_points_avg_away">Away Team Avg Points:</label>
+                <input type="text" id="team_points_avg_away" name="team_points_avg_away" class="form-control">
+            </div>
+            <!-- Add other input fields as necessary -->
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

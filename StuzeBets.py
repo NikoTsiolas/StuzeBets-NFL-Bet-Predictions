@@ -100,6 +100,8 @@ print(f'y_test shape: {y_test.shape}')
 model = RandomForestClassifier(n_estimators=100, random_state=45)
 model.fit(X_train, y_train)
 
+joblib.dump(model, 'model/stuzebets_model.pkl')
+
 y_pred = model.predict(X_test)
 
 accuracy = accuracy_score(y_test, y_pred)

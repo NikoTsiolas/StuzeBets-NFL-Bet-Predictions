@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StuzeBets - NFL Betting Predictions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="{{ url_for('static', filename='LogoWhite.png') }}" alt="Logo" class="logo">
+            <h2>StuzeBets</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">The Lab</a></li>
+            <li><a href="#">Offers</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Home</a>
+        </nav>
+        
+        <div class="container mt-5">
+            <div class="jumbotron text-center">
+                <h1 class="display-4">Welcome to StuzeBets!</h1>
+                <p class="lead">Revolutionizing NFL Betting Predictions with Advanced Algorithms.</p>
+                <hr class="my-4">
+                <p>Join us and get the most accurate predictions to make informed betting decisions.</p>
+                <a class="btn btn-primary btn-lg" href="#" role="button">Sign Up</a>
+                <a class="btn btn-secondary btn-lg" href="#" role="button">Log In</a>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Advanced Algorithms</h5>
+                            <p class="card-text">Our algorithms analyze years of NFL data to provide the most accurate predictions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Easy to Use</h5>
+                            <p class="card-text">Our platform is user-friendly and easy to navigate, ensuring you can make predictions quickly.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">High Accuracy</h5>
+                            <p class="card-text">We boast a high accuracy rate in our predictions, helping you make better betting decisions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5">
+                <h2 class="text-center">Featured Predictions</h2>
+                <div class="row">
+                    <!-- Example Prediction Card -->
+                    <div class="col-md-4">
+                        <div class="card game-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Team A vs Team B</h5>
+                                <p class="card-text">Date: May 7</p>
+                                <p class="card-text">Stadium: XYZ Stadium</p>
+                                <p class="card-text">Home Team Probability: 70%</p>
+                                <p class="card-text">Away Team Probability: 30%</p>
+                                <a href="#" class="btn btn-primary">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Repeat for more prediction cards -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

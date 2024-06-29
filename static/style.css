@@ -1,35 +1,124 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #2C2F33; /* Dark background color */
+    color: #FFF; /* Text color */
     margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
 }
 
-.container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #23272A; /* Darker sidebar color */
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-h1 {
+.sidebar-header {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.form-group {
-    margin-bottom: 15px;
+.sidebar-header .logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
 }
 
-.btn {
-    display: block;
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
     width: 100%;
+    text-align: center;
 }
 
-#result {
-    margin-top: 20px;
-    font-size: 1.2em;
+.sidebar-menu li a {
+    display: block;
+    padding: 10px 0;
+    color: #FFF;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.sidebar-menu li a:hover, .sidebar-menu li a.active {
+    background-color: #7289DA;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.navbar {
+    background-color: #99AAB5; /* Light background color for navbar */
+    margin-bottom: 20px;
+}
+
+.jumbotron {
+    background-color: #7289DA; /* Jumbotron background color */
+    color: #FFF; /* Text color */
+    padding: 50px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.card {
+    background-color: #2C2F33; /* Dark background color for card */
+    color: #FFF; /* Text color */
+    border: none;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.2rem;
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+.btn-secondary {
+    background-color: #7289DA;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #5A73BE;
+}
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.text-center {
     text-align: center;
+}
+h1{
+    color: #7289DA;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+p{
+    color: black;
+    font-size: 1.2rem;
 }

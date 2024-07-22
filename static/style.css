@@ -1,7 +1,28 @@
+
+
+.logo {
+    height:auto;
+    padding:20px;
+    
+}
+
+.main-logo {
+    width: 400px;
+    height: auto;
+    padding:20px;
+}
+
+.side-logo {
+    width: 200px;
+    height: auto;
+}
 body {
     overflow-x: hidden;
     background-color: #1a1a1a;
     color: #ffffff;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 100;
+    font-style: normal
 }
 
 #sidebar-wrapper {
@@ -28,6 +49,10 @@ body {
 }
 
 @media (min-width: 768px) {
+    .jumbotron .row > div {
+        margin-bottom: 1rem;
+    }
+
     #sidebar-wrapper {
         margin-left: 0;
     }
@@ -42,18 +67,13 @@ body {
     }
 }
 
-.logo {
-    width: 80px;
-    height: auto;
-}
-
 .card {
     transition: all 0.3s;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(255,255,255,0.1);
+    box-shadow: 0 4px 15px #08feac;
 }
 
 .bg-gradient-dark {
@@ -61,13 +81,65 @@ body {
 }
 
 .list-group-item-action:hover {
-    background-color: rgba(255,255,255,0.1) !important;
+    background-color: #08feac !important;
 }
 
 .jumbotron {
-    border-radius: 15px;
+    padding: 2rem;
 }
 
 .progress {
     background-color: #444;
+}
+
+
+
+.btn-signup {
+    background-color: #08feac; 
+    color: #1a1a1a;
+    border-color: #08feac;
+}
+
+.btn-signup:hover {
+    background-color: #039eac; 
+    border-color: #000000;
+}
+
+.btn-login {
+    background-color: #08feac; 
+    color: #1a1a1a;
+    border-color: #08feac;
+}
+
+.btn-login:hover {
+    background-color: #039eac; 
+    border-color: #000000;
+}
+
+.btn-moneyline {
+    background-color: #08feac; 
+    color: #1a1a1a;
+    border-color: #08feac;
+}
+
+.btn-moneyline:hover {
+    background-color: #039eac; 
+    border-color: #000000;
+}
+
+
+.archivo-black-regular {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+
+.signika-Signika> {
+  font-family: "Signika", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "GRAD" 0;
 }

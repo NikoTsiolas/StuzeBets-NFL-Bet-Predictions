@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Francois+One&family=Signika:wght@300..700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body class="bg-dark text-light">
@@ -14,8 +20,8 @@
         <!-- Sidebar -->
         <div class="bg-gradient-dark" id="sidebar-wrapper">
             <div class="sidebar-heading text-center py-4">
-                <img src="{{ url_for('static', filename='LogoWhite.png') }}" alt="Logo" class="logo mb-2">
-                <h2 class="text-light">StuzeBets</h2>
+                <img src="{{ url_for('static', filename='assets/LogoTrans.png') }}" alt="SideLogo" class="logo side-logo mb-2">
+
             </div>
             <div class="list-group list-group-flush">
                 <a href="#" class="list-group-item list-group-item-action bg-transparent text-light active">
@@ -54,15 +60,25 @@
             </nav>
 
             <div class="container-fluid mt-4">
-                <div class="jumbotron bg-gradient-dark text-light text-center">
-                    <h1 class="display-4">Welcome to StuzeBets!</h1>
-                    <p class="lead">Revolutionizing NFL Betting Predictions with Advanced Algorithms.</p>
-                    <hr class="my-4 bg-light">
-                    <p>Join us and get the most accurate predictions to make informed betting decisions.</p>
-                    <a class="btn btn-primary btn-lg mr-2" href="#" role="button">Sign Up</a>
-                    <a class="btn btn-outline-light btn-lg mr-2" href="#" role="button">Log In</a>
-                    <a class="btn btn-success btn-lg" href="{{ url_for('moneyline') }}" role="button">MoneyLine Betting</a>
+                <div class="jumbotron bg-gradient-dark text-light">
+                    <div class="row align-items-center">
+                        <div class="col-md-3 text-center text-md-left">
+                            <img src="{{ url_for('static', filename='assets/LogoTrans.png') }}" alt="Logo" class="logo main-logo img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <h1 class="display-4">Welcome to StuzeBets!</h1>
+                            <p class="lead">Revolutionizing NFL Betting Predictions with Advanced Algorithms.</p>
+                            <hr class="my-4 bg-light">
+                            <p>Join us and get the most accurate predictions to make informed betting decisions.</p>
+                            <div class="text-center text-md-left">
+                                <a class="btn btn-signup btn-lg mr-2 mb-2" href="#" role="button">Sign Up</a>
+                                <a class="btn btn-login btn-lg mr-2 mb-2" href="#" role="button">Log In</a>
+                                <a class="btn btn-moneyline btn-lg mb-2" href="{{ url_for('moneyline') }}" role="button">MoneyLine Betting</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
                 <div class="row mt-5">
                     <div class="col-md-4 mb-4">
